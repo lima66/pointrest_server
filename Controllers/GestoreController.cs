@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PointrestServerSide.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -17,12 +18,12 @@ namespace PointrestServerSide.Controllers
 
         // GET: api/Gestore/5
         [HttpGet]
-        public string Get(int id)
+        public Gestore Get(int id)
         {
             //return : [class Gestore,[class PuntoInteresse ]]
             //info: ritorna le info del gestore con id == {id}
 
-            return "value";
+            return new Gestore("1234", "Il nome del gestore", "la passowrd", null);
         }
 
         // POST: api/Gestore
