@@ -12,7 +12,7 @@ namespace PointrestServerSide.Models
         public string IDGestore { get; set; }
         public string nome { get; set; }
         public string categoria { get; set; }
-        public string? sottocategoria { get; set; }
+        public string sottocategoria { get; set; }
         public string descrizione { get; set; }
         public double latitudine { get; set; }
         public double longitudine { get; set; }
