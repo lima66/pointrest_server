@@ -19,5 +19,30 @@ namespace PointrestServerSide.Models
         public string tipo { get; set; }
         public List<Image> images { get; set; }
 
+        public PuntoInteresse(string ID, string IDGestore, string nome, string categoria, string sottocategoria, 
+            string descrizione, double latitudine, double longitudine, string tipo, List<Image> images)
+        {
+            this.ID = ID;
+            this.IDGestore = IDGestore;
+            this.nome = nome;
+            this.categoria = categoria;
+
+            if (sottocategoria != null)
+            {
+                this.sottocategoria = sottocategoria;
+            }
+            
+            this.descrizione = descrizione;
+            this.latitudine = latitudine;
+            this.longitudine = longitudine;
+            this.tipo = tipo;
+
+            if (images != null)
+            {
+                this.images = images;
+            }
+        }
+        
+
     }
 }
