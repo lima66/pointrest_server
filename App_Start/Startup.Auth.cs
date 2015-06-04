@@ -9,7 +9,7 @@ using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using PointrestServerSide.Providers;
-using PointrestServerSide.Models;
+using PointrestServerSide.DTO;
 
 namespace PointrestServerSide
 {

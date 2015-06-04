@@ -1,4 +1,4 @@
-﻿using PointrestServerSide.Models;
+﻿using PointrestServerSide.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;

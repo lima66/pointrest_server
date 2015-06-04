@@ -1,4 +1,4 @@
-﻿using PointrestServerSide.Models;
+﻿using PointrestServerSide.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +29,9 @@ namespace PointrestServerSide.Controllers
 
             //(string ID, string IDGestore, string nome, string categoria, string sottocategoria, 
             //string descrizione, double latitudine, double longitudine, string tipo, List<Image> images
-            puntiInteresse.Add(new PuntoInteresse("1234", "ID Gestore", "Il nome", "La categoria", "la sottocategoria", 
+            puntiInteresse.Add(new PuntoInteresse(1234, 3241, "Il nome", "La categoria", "la sottocategoria", 
                                                     "la descrizione", 123.5, 123.5, "Il tipo", null));
-            puntiInteresse.Add(new PuntoInteresse("5678", "ID Gestore 2", "Il nome 2", "La categoria 2", "la sottocategoria 2", 
+            puntiInteresse.Add(new PuntoInteresse(7686, 6574, "Il nome 2", "La categoria 2", "la sottocategoria 2", 
                                                     "la descrizione 2", 123.5, 123.5, "Il tipo 2", null));
 
             return puntiInteresse;
@@ -43,7 +43,7 @@ namespace PointrestServerSide.Controllers
             //return: [class PuntoInteresse]
             //info: ritorna il punto di interesse con id == id
 
-            return new PuntoInteresse("5678", "ID Gestore 2", "Il nome 2", "La categoria 2", "la sottocategoria 2",
+            return new PuntoInteresse(5678, 7676786, "Il nome 2", "La categoria 2", "la sottocategoria 2",
                                                     "la descrizione 2", 123.5, 123.5, "Il tipo 2", null);
         }
 
