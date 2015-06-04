@@ -21,8 +21,8 @@ namespace PointrestServerSide.DTO
 
         public PuntoInteresse() { }
 
-        public PuntoInteresse(string ID, string IDGestore, string nome, string categoria, string sottocategoria, 
-            string descrizione, double latitudine, double longitudine, string tipo, List<byte[]> images)
+        public PuntoInteresse(int ID, int IDGestore, string nome, string categoria, string sottocategoria, 
+            string descrizione, double latitudine, double longitudine, string tipo, List<string> images)
         {
             this.ID = ID;
             this.IDGestore = IDGestore;
