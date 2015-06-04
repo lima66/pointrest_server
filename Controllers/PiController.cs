@@ -18,22 +18,33 @@ namespace PointrestServerSide.Controllers
 
         // GET: api/Pi/5
         [HttpGet]
-        public string Get(CurrentUserData currentDataUser)
+        public List<PuntoInteresse> Get(CurrentUserData currentDataUser)
         {
 
             //return: [class PuntoInteresse]
             //info: ritorna un array di punti d’interesse in base al currentDataUser
 
-            return "value";
+            List<PuntoInteresse> puntiInteresse = new List<PuntoInteresse>();
+
+
+            //(string ID, string IDGestore, string nome, string categoria, string sottocategoria, 
+            //string descrizione, double latitudine, double longitudine, string tipo, List<Image> images
+            puntiInteresse.Add(new PuntoInteresse("1234", "ID Gestore", "Il nome", "La categoria", "la sottocategoria", 
+                                                    "la descrizione", 123.5, 123.5, "Il tipo", null));
+            puntiInteresse.Add(new PuntoInteresse("5678", "ID Gestore 2", "Il nome 2", "La categoria 2", "la sottocategoria 2", 
+                                                    "la descrizione 2", 123.5, 123.5, "Il tipo 2", null));
+
+            return puntiInteresse;
         }
         [HttpGet]
-        public string Get(int id)
+        public PuntoInteresse Get(int id)
         {
 
             //return: [class PuntoInteresse]
-            //info: ritorna un array di punti d’interesse in base al currentDataUser
+            //info: ritorna il punto di interesse con id == id
 
-            return "value";
+            return new PuntoInteresse("5678", "ID Gestore 2", "Il nome 2", "La categoria 2", "la sottocategoria 2",
+                                                    "la descrizione 2", 123.5, 123.5, "Il tipo 2", null);
         }
 
         // POST: api/Pi
