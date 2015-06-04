@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PointrestServerSide.Models
+namespace PointrestServerSide.DTO
 {
     // Models returned by AccountController actions.
 

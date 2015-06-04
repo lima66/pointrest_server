@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86920C
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "..\Data\Data.csproj", "{6642C7D4-4F11-4C76-832D-3C9643050057}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{2CB23451-0341-4362-BA92-38D450D52899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +26,14 @@ Global
 		{D5E32045-4208-4894-8B74-62D41CB57805}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E32045-4208-4894-8B74-62D41CB57805}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E32045-4208-4894-8B74-62D41CB57805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6642C7D4-4F11-4C76-832D-3C9643050057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6642C7D4-4F11-4C76-832D-3C9643050057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6642C7D4-4F11-4C76-832D-3C9643050057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6642C7D4-4F11-4C76-832D-3C9643050057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB23451-0341-4362-BA92-38D450D52899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB23451-0341-4362-BA92-38D450D52899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB23451-0341-4362-BA92-38D450D52899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB23451-0341-4362-BA92-38D450D52899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

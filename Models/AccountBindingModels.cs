@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace PointrestServerSide.Models
+namespace PointrestServerSide.DTO
 {
     // Models used as parameters to AccountController actions.
 
