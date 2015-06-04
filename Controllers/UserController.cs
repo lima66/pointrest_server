@@ -24,9 +24,12 @@ namespace PointrestServerSide.Controllers
 
         // POST: api/User
         [HttpGet]
-        public void Post(User user)
+        public HttpResponseMessage Post( User user )
         {
             //return : “201” succesfull, “403” denied, “500” internal server error
+            HttpResponseMessage response = Request.CreateResponse( HttpStatusCode.OK, "ok" );
+            response.Content = new StringContent( "hello", Encoding.Unicode );
+            return response;
         }
 
         //POST: api/User/5
