@@ -1,4 +1,5 @@
 ﻿using PointrestServerSide.DTO;
+using Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,13 @@ namespace PointrestServerSide.Controllers
 {
     public class UserController : ApiController
     {
+        private UserRepository userRespository;
+
+        public UserController()
+        {
+            userRespository = new UserRepository();
+        }
+
         //// GET: api/User
         //public IEnumerable<string> Get()
         //{
@@ -26,17 +34,20 @@ namespace PointrestServerSide.Controllers
         [HttpGet]
         public HttpResponseMessage Post( User user )
         {
-            //return : “201” succesfull, “403” denied, “500” internal server error
-            HttpResponseMessage response = Request.CreateResponse( HttpStatusCode.OK, "ok" );
-            
-            return response;
+            if(user == null)
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+            return userRespository.Post(user);
         }
 
         //POST: api/User/5
         [HttpPost]
-        public void Post( int id, [FromBody]int idPuntoInteresse )
+        public HttpResponseMessage Post(int id, [FromBody]int idPuntoInteresse)
         {
+            if (id == 0 || idPuntoInteresse == 0)
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
 
+            return userRespository.Post(id, idPuntoInteresse);
         }
 
         //// PUT: api/User/5
