@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -16,13 +17,12 @@ namespace PointrestServerSide.DTO
         public string Descrizione { get; set; }
         public double Latitudine { get; set; }
         public double Longitudine { get; set; }
-        public string Tipo { get; set; }
-        public List<string> Images { get; set; }
+        public List<ImmaginePuntoInteresse> Images { get; set; }
 
         public PuntoInteresse() { }
 
-        public PuntoInteresse(int ID, int IDGestore, string nome, string categoria, string sottocategoria, 
-            string descrizione, double latitudine, double longitudine, string tipo, List<string> images)
+        /*public PuntoInteresse(int ID, int IDGestore, string nome, string categoria, string sottocategoria, 
+            string descrizione, double latitudine, double longitudine, string tipo, List<ImmaginePuntoInteresse> images)
         {
             this.ID = ID;
             this.IDGestore = IDGestore;
@@ -43,7 +43,7 @@ namespace PointrestServerSide.DTO
             {
                 this.Images = images;
             }
-        }
+        }*/
         
 
     }
