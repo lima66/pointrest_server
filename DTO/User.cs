@@ -7,23 +7,19 @@ namespace PointrestServerSide.DTO
 {
     public class User
     {
-        public User(string ID, string userName, string name, string surname, List<PuntoInteresse> cPreferiti)
+        public User(int ID, string userName, string name, string surname,string password)
         {
             this.ID = ID;
             this.userName = userName;
             this.name = name;
             this.surName = surName;
-            
-            if(cPreferiti != null) {
-                preferiti = cPreferiti;
-            }
+            this.password = password;
         }
 
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string userName { get; set; }
         public string name { get; set; }
         public string surName { get; set; }
-        public List<PuntoInteresse> preferiti { get; set; }
-
+        public string password { get; set; }
     }
 }

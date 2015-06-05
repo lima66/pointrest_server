@@ -1,4 +1,5 @@
 ﻿using PointrestServerSide.DTO;
+using Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,12 @@ namespace PointrestServerSide.Controllers
 {
     public class GestoreController : ApiController
     {
+        private GestoreRepository gestoreRepository;
+
+        public GestoreController()
+        {
+            gestoreRepository = new GestoreRepository();
+        }
         //// GET: api/Gestore
         //public IEnumerable<string> Get()
         //{
@@ -20,16 +27,20 @@ namespace PointrestServerSide.Controllers
         [HttpGet]
         public Gestore Get(int id)
         {
-            //return : [class Gestore,[class PuntoInteresse ]]
-            //info: ritorna le info del gestore con id == {id}
+            if (id == 0)
+                return null;
 
-            return new Gestore("1234", "Il nome del gestore", "la passowrd", null);
+            return gestoreRepository.Get(id);
         }
 
         // POST: api/Gestore
         [HttpPost]
-        public void Post(Gestore gestore)
+        public HttpResponseMessage Post(Gestore gestore)
         {
+            if (gestore == null)
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+            return gestoreRepository.Post(gestore);
         }
 
         //// PUT: api/Gestore/5
@@ -37,9 +48,13 @@ namespace PointrestServerSide.Controllers
         //{
         //}
 
-        //// DELETE: api/Gestore/5
-        //public void Delete(int id)
-        //{
-        //}
+        // DELETE: api/Gestore/5
+        public HttpResponseMessage Delete(int id)
+        {
+            if(id == 0)
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+            return gestoreRepository.Delete(id);
+        }
     }
 }
