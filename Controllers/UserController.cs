@@ -28,13 +28,13 @@ namespace PointrestServerSide.Controllers
         {
             //return : “201” succesfull, “403” denied, “500” internal server error
             HttpResponseMessage response = Request.CreateResponse( HttpStatusCode.OK, "ok" );
-            response.Content = new StringContent( "hello", Encoding.Unicode );
+            
             return response;
         }
 
         //POST: api/User/5
         [HttpPost]
-        public void Post( int id, [FromBody]string idPuntoInteresse )
+        public void Post( int id, [FromBody]int idPuntoInteresse )
         {
 
         }

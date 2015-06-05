@@ -7,20 +7,23 @@ namespace PointrestServerSide.DTO
 {
     public class Gestore
     {
-        public string ID { get; set; }
-        public string nome { get; set; }
+        public int ID { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
-        public List<PuntoInteresse> puntiInteresseGestiti { get; set; }
-        public Gestore(string ID, string nome, string password, List<PuntoInteresse> cPuntiInteresseGestiti)
+        public string nome { get; set; }
+        public string cognome { get; set; }
+        public bool isTombStone { get; set; }
+
+        public Gestore() { }
+       
+        public Gestore(int ID, string username, string password, string nome, string cognome, bool isTombStone)
         {
             this.ID = ID;
-            this.nome = nome;
+            this.username = username;
             this.password = password; // da criptare
-
-            if (cPuntiInteresseGestiti != null)
-            {
-                this.puntiInteresseGestiti = cPuntiInteresseGestiti;
-            }
+            this.nome = nome;
+            this.cognome = cognome;
+            this.isTombStone = isTombStone;
         }
         
     }

@@ -30,6 +30,7 @@ namespace PointrestServerSide.Controllers
         [HttpPost]
         public void Post(Gestore gestore)
         {
+
         }
 
         //// PUT: api/Gestore/5
